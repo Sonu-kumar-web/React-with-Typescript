@@ -1,4 +1,5 @@
 import React from "react";
+import PizzaCSS from "./pizza.module.css";
 
 // Describe props
 interface Pizza {
@@ -16,7 +17,7 @@ interface Props {
 // Function component declaration
 const Pizza: React.FC<Props> = ({ pizza }) => {
   return (
-    <li style={{ display: "flex", marginLeft: "2rem" }}>
+    <li className={PizzaCSS.container}>
       <div>
         <h2>{pizza.name}</h2>
         <p>{pizza.description}</p>
